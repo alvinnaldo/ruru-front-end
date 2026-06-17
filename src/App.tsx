@@ -3,10 +3,15 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './lib/react-query';
 import { RootLayout } from './routes/RootLayout';
 import { AuthLayout } from './routes/AuthLayout';
+import { LandingPage } from './routes/LandingPage';
 import { LoginForm } from './features/auth/components/LoginForm';
 import { RegisterForm } from './features/auth/components/RegisterForm';
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <LandingPage />,
+  },
   {
     element: <AuthLayout />,
     children: [
@@ -21,11 +26,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/',
+    path: '/dashboard',
     element: <RootLayout />,
     children: [
       {
-        path: '/',
+        path: '/dashboard',
         element: (
           <div className="h-full flex flex-col">
             <h1 className="text-2xl font-bold mb-4 tracking-tight">Dashboard</h1>
