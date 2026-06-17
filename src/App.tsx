@@ -7,6 +7,7 @@ import { LandingPage } from './routes/LandingPage';
 import { LoginForm } from './features/auth/components/LoginForm';
 import { RegisterForm } from './features/auth/components/RegisterForm';
 import { Dashboard } from './features/workspace/components/Dashboard';
+import { Taskboard } from './features/workspace/components/Taskboard';
 
 const router = createBrowserRouter([
   {
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        path: '/dashboard',
+        path: '',
         element: <Dashboard />,
+      },
+      {
+        path: 'taskboard',
+        element: <Taskboard />,
       },
     ],
   },
