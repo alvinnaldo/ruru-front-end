@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-primary: #00685f;
+  --color-primary-hover: #008378;
+  --color-accent: #f97316; /* orange-500 */
+  --color-accent-hover: #ea580c;
+  
+  --color-background-light: #F8FAFC;
+  --color-surface-light: #FFFFFF;
+  --color-border-light: #E2E8F0;
+  --color-text-light: #0F172A;
+  
+  --color-background-dark: #0F172A;
+  --color-surface-dark: #1E293B;
+  --color-border-dark: #334155;
+  --color-text-dark: #F8FAFC;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-background-light)] text-[var(--color-text-light)] antialiased;
+  }
+  
+  /* Dark mode support using Tailwind v4 dark variant or just simple class */
+  .dark body {
+    @apply bg-[var(--color-background-dark)] text-[var(--color-text-dark)];
+  }
+}
