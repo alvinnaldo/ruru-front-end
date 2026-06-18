@@ -10,6 +10,7 @@ import { Dashboard } from './features/workspace/components/Dashboard';
 import { Taskboard } from './features/workspace/components/Taskboard';
 import { ChatPage } from './features/chat/components/ChatPage';
 import { TeamPage } from './features/team/components/TeamPage';
+import { TimelinePage } from './features/timeline/components/TimelinePage';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: 'team',
         element: <TeamPage />,
+      },
+      {
+        path: 'timeline',
+        element: <TimelinePage />,
       },
     ],
   },

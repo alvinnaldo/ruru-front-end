@@ -54,9 +54,12 @@ export function RootLayout() {
               </NavLink>
             </li>
             <li>
-              <button className="w-full text-left px-3 py-2 rounded-md hover:bg-black/5 font-medium text-sm transition-colors">
+              <NavLink 
+                to="/dashboard/timeline"
+                className={({ isActive }) => `block w-full text-left px-3 py-2 rounded-md font-medium text-sm transition-colors ${isActive ? 'bg-[var(--color-primary)] text-white' : 'hover:bg-black/5 text-[var(--color-text-light)]'}`}
+              >
                 Timeline
-              </button>
+              </NavLink>
             </li>
           </ul>
         </nav>
