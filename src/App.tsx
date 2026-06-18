@@ -11,6 +11,7 @@ import { Taskboard } from './features/workspace/components/Taskboard';
 import { ChatPage } from './features/chat/components/ChatPage';
 import { TeamPage } from './features/team/components/TeamPage';
 import { TimelinePage } from './features/timeline/components/TimelinePage';
+import { SettingsPage } from './features/settings/components/SettingsPage';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: 'timeline',
         element: <TimelinePage />,
+      },
+      {
+        path: 'settings',
+        element: <SettingsPage />,
       },
     ],
   },
