@@ -9,6 +9,7 @@ import { RegisterForm } from './features/auth/components/RegisterForm';
 import { Dashboard } from './features/workspace/components/Dashboard';
 import { Taskboard } from './features/workspace/components/Taskboard';
 import { ChatPage } from './features/chat/components/ChatPage';
+import { TeamPage } from './features/team/components/TeamPage';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: 'chat',
         element: <ChatPage />,
+      },
+      {
+        path: 'team',
+        element: <TeamPage />,
       },
     ],
   },
