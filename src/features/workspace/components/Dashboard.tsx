@@ -23,7 +23,7 @@ export function Dashboard() {
   };
 
   return (
-    <div className="h-full flex flex-col max-w-6xl mx-auto w-full">
+    <div className="h-full flex flex-col max-w-6xl mx-auto w-full p-6">
       {/* Header */}
       <div className="flex items-end justify-between mb-8 pt-4">
         <div>

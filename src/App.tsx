@@ -8,6 +8,7 @@ import { LoginForm } from './features/auth/components/LoginForm';
 import { RegisterForm } from './features/auth/components/RegisterForm';
 import { Dashboard } from './features/workspace/components/Dashboard';
 import { Taskboard } from './features/workspace/components/Taskboard';
+import { ChatPage } from './features/chat/components/ChatPage';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'taskboard',
         element: <Taskboard />,
+      },
+      {
+        path: 'chat',
+        element: <ChatPage />,
       },
     ],
   },

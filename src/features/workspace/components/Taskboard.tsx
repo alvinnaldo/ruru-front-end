@@ -97,7 +97,7 @@ export function Taskboard() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col min-w-0 overflow-hidden">
+    <div className="h-full w-full flex flex-col min-w-0 overflow-hidden p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6 flex-shrink-0 min-w-0">
         <div className="min-w-0 truncate pr-4">
