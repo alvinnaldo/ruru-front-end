@@ -12,6 +12,7 @@ import { ChatPage } from './features/chat/components/ChatPage';
 import { TeamPage } from './features/team/components/TeamPage';
 import { TimelinePage } from './features/timeline/components/TimelinePage';
 import { SettingsPage } from './features/settings/components/SettingsPage';
+import { InvitationsPage } from './features/invitations/components/InvitationsPage';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: 'timeline',
         element: <TimelinePage />,
+      },
+      {
+        path: 'invitations',
+        element: <InvitationsPage />,
       },
       {
         path: 'settings',

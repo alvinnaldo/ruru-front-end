@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useTeamMembers } from '../hooks/useTeam';
 import { Search, UserPlus, MoreHorizontal, Filter, Shield, User, Clock } from 'lucide-react';
 import { Button } from '../../../components/ui/Button';
+import { InviteMemberModal } from './InviteMemberModal';
 
 export function TeamPage() {
   const { data: members, isLoading } = useTeamMembers();
   const [search, setSearch] = useState('');
+  const [isInviteModalOpen, setIsInviteModalOpen] = useState(false);
 
   const filteredMembers = members?.filter(m => 
     m.name.toLowerCase().includes(search.toLowerCase()) || 
@@ -40,7 +42,7 @@ export function TeamPage() {
           <p className="text-[var(--color-text-light)]/60 mt-1">Manage workspace members and their roles.</p>
         </div>
         <div className="flex gap-3">
-          <Button variant="primary">
+          <Button variant="primary" onClick={() => setIsInviteModalOpen(true)}>
             <UserPlus className="w-4 h-4 mr-2" /> Invite Member
           </Button>
         </div>
@@ -140,6 +142,8 @@ export function TeamPage() {
           </table>
         </div>
       </div>
+
+      <InviteMemberModal isOpen={isInviteModalOpen} onClose={() => setIsInviteModalOpen(false)} />
     </div>
   );
 }
